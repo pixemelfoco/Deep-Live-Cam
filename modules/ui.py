@@ -555,12 +555,8 @@ def create_preview(parent: ctk.CTkToplevel) -> ctk.CTkToplevel:
     return preview
 
 
-def update_status(text):
-    if status_label:
-        status_label.configure(text=_(text))
-    else:
-        print(f"[STATUS] {text}")
-
+def update_status(text: str) -> None:
+    status_label.configure(text=_(text))
     ROOT.update()
 
 
